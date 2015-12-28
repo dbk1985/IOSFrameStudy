@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController ,UIScrollViewDelegate{
     private let yOffset:CGFloat = 260
@@ -17,10 +18,10 @@ class ViewController: UIViewController ,UIScrollViewDelegate{
     var containerView:UIView? = nil
     
     override func loadView() {
-        let scrollView : UIScrollView = UIScrollView(frame: CGRectMake(0,0,CGRectGetWidth(UIScreen.mainScreen().bounds), CGRectGetHeight(UIScreen.mainScreen().bounds)))
+        let scrollView : UIScrollView = UIScrollView()
         scrollView.backgroundColor = UIColor.greenColor()
         scrollView.tag = 200
-        scrollView.contentSize = CGSizeMake(CGRectGetWidth(scrollView.bounds), CGRectGetHeight(scrollView.bounds) * 1.1)
+        scrollView.contentSize = CGSizeMake(CGRectGetWidth(scrollView.bounds), CGRectGetHeight(scrollView.bounds) * 2)
         scrollView.delegate  = self
         scrollView.contentInset = UIEdgeInsetsMake(yOffset, 0, 0, 0)
         self.view = scrollView
@@ -28,10 +29,22 @@ class ViewController: UIViewController ,UIScrollViewDelegate{
         topView = UIView(frame: CGRectMake(0, -yOffset, CGRectGetWidth(UIScreen.mainScreen().bounds), topViewHeight))
         topView!.backgroundColor = UIColor.redColor()
         scrollView.addSubview(topView!)
+        topView!.snp_makeConstraints { (make) -> Void in
+            make.left.equalTo(0)
+            make.right.equalTo(0)
+            make.top.equalTo(0)
+            make.height.equalTo(topViewHeight)
+        }
         
         bottomView = UIView(frame: CGRectMake(0, 40, CGRectGetWidth(UIScreen.mainScreen().bounds), CGRectGetHeight(UIScreen.mainScreen().bounds) - yOffset))
         bottomView!.backgroundColor = UIColor.grayColor()
         scrollView.addSubview(bottomView!);
+//        bottomView?.snp_makeConstraints(closure: { (make) -> Void in
+//            make.left.equalTo(0)
+//            make.right.equalTo(0)
+//            make.bottom.equalTo(0)
+//            make.top.equalTo(0)
+//        })
     }
     
     override func viewDidLoad() {

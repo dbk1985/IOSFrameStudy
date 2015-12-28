@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,27 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="LyK-qy-LqE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxb-31-C6T" userLabel="View1">
-                                <rect key="frame" x="73" y="199" width="248" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zl8-fp-GaJ" userLabel="View2">
-                                <rect key="frame" x="50" y="461" width="223" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="zl8-fp-GaJ" firstAttribute="top" secondItem="LyK-qy-LqE" secondAttribute="top" constant="461" id="AnC-QI-3O7"/>
-                            <constraint firstItem="6cE-Jc-Exo" firstAttribute="top" secondItem="zl8-fp-GaJ" secondAttribute="bottom" constant="78" id="NPl-md-Bkc"/>
-                            <constraint firstItem="Jxb-31-C6T" firstAttribute="top" secondItem="Yrh-CJ-qux" secondAttribute="bottom" constant="179" id="So0-lE-epI"/>
-                            <constraint firstItem="Jxb-31-C6T" firstAttribute="leading" secondItem="LyK-qy-LqE" secondAttribute="leadingMargin" constant="57" id="YHc-59-N3x"/>
-                            <constraint firstItem="zl8-fp-GaJ" firstAttribute="top" secondItem="Jxb-31-C6T" secondAttribute="bottom" constant="134" id="daK-j0-Yus"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zl8-fp-GaJ" secondAttribute="trailing" constant="86" id="ggA-ON-a3h"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jxb-31-C6T" secondAttribute="trailing" constant="38" id="n3Q-Pn-1JY"/>
-                            <constraint firstItem="zl8-fp-GaJ" firstAttribute="leading" secondItem="LyK-qy-LqE" secondAttribute="leadingMargin" constant="9" id="uhf-Nf-1KH"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
